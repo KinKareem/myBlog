@@ -1,6 +1,6 @@
-document.getElementById('nextPage').addEventListener('click', function () {
+document.querySelector('.nextHome').addEventListener('click', function () {
     // Start the slide transition
-    const slide = document.getElementById('transition-slide');
+    const slide = document.querySelector('.transition-slide');
     slide.style.left = '0';
 
     // Wait for the animation to finish before navigating to a new page
