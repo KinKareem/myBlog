@@ -1,0 +1,168 @@
+/* Font Home */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.contianer_comment {
+    margin-left: 20px;
+    color: aliceblue;
+    padding: 20px;
+    height: auto;
+    width: 500px;
+    border: 1px solid #ffffff;
+    box-shadow: 0.1px 0.1px 5px rgb(255, 255, 255);
+}
+
+.head {
+    text-transform: uppercase;
+    margin-bottom: 20;
+}
+
+.text {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.commentbox {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.commentbox>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    width: 100%;
+}
+
+.user {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    color: aliceblue;
+    margin-left: 20px;
+    padding: 10px;
+    background: transparent;
+}
+
+.usercomment::placeholder {
+    color: rgb(205, 205, 205);
+}
+
+.commentinput>input {
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    padding-left: 0;
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
+    width: 95%;
+    background: transparent;
+    color: whitesmoke;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+}
+
+.buttons button {
+    margin-top: 15px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border: white;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: white;
+    transition: ease 0.25s;
+}
+
+.buttons button.abled {
+    border: white;
+    background-color: whitesmoke;
+    color: #120538;
+}
+
+.notify {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notify>input {
+    margin-right: 5px;
+}
+
+.parents {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.parents h1 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.parents p {
+    margin: 11px 0;
+    font-size: 0.9rem;
+}
+
+.parents>img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 25px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.date {
+    margin-top: 10px;
+    color: aliceblue;
+    font-size: 0.8rem;
+}
+
+.comments {
+    max-height: 300px;
+    /* Ubah sesuai kebutuhan Anda */
+    overflow-y: auto;
+    padding: 10px;
+    border: transparent;
+    /* Tambahan optional untuk batas */
+    border-radius: 5px;
+    background-color: transparent;
+    /* Warna background */
+}
+
+/* Menyembunyikan scrollbar pada browser tertentu untuk estetika */
+.comments::-webkit-scrollbar {
+    width: 6px;
+}
+
+.comments::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+/* gambar */

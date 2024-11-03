@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <!-- File Css -->
+    <link rel="stylesheet" href="css_game.css">
+    <link rel="stylesheet" href="comment.css">
+
+    <!-- File Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- FIle Javascript -->
+    <!-- <script src="pupup_video.js" defer></script> -->
+
+    <!-- Link Icon dari Google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- Transisi Halaman -->
+    <div class="transition-slide"></div>
+
+    <!-- header home -->
+    <header class="header_home">
+        <a href="#" class="logo_home">Logo</a>
+        <nav class="header_link">
+            <a href="index.html" class="nextHome">Home</a>
+            <a href="#" class="nextGame">Games</a>
+            <a href="#" class="nextAnime">Anime</a>
+            <a href="#" class="nextMusic">Music</a>
+            <a href="#" class="nextData">About Me</a>
+        </nav>
+    </header>
+
+    <!-- Isi -->
+    <div class="border_gambar">
+        <!-- <img class="robin" src="gambar/robin.png" alt=""> -->
+        <div class="border-bg">
+            <img class="hsr" src="gambar/hsr.png" alt="">
+            <div class="isi">
+                <!-- Deskripsi game -->
+                <h1 class="judul_game">Honkai Star Rail</h1>
+                <p class="deskripsi"> Honkai: Star Rail is a free-to-play role-playing gacha video game developed and
+                    published by miHoYo
+                    (with publishing outside mainland China under Cognosphere, HoYoverse).
+                    It is miHoYo's first turn-based game, featuring the main character, who is referred to as the
+                    Trailblazer, travelling across planets through the Astral Express to help and connect
+                    the worlds while resolving disasters caused by "Stellarons" and other third-parties.</p>
+            </div>
+            <!-- Gameplay -->
+            <div class="gameplay">
+                <h1> Gameplay </h1>
+                <hr>
+
+                <div class="video_game">
+                    <!-- Video 1 -->
+                    <video paused loop muted autoplay class="game1">
+                        <source src="gambar/Game 1 hsr.mp4">
+                    </video>
+                    <!-- Video 2 -->
+                    <video paused loop muted autoplay class="game1">
+                        <source src="gambar/Game 2 hsr.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <img class="firefly" src="gambar/firefly.png" alt="">
+    </div>
+
+    <!-- Coment Session -->
+    <!-- box coment -->
+    <div class="contianer_comment">
+        <div class="head">
+            <h1>Post a Coment</h1>
+        </div>
+        <div>
+            <span id="comment">0</span> Comments
+        </div>
+        <div class="text">
+            <p>Place your UID and we can be a friend and play together</p>
+        </div>
+        <hr>
+        <div class="comments"></div>
+
+        <!-- Untuk Comment -->
+        <div class="commentbox">
+            <img src="gambar/Desain tanpa judul (16).png" alt="">
+            <div class="content">
+                <h2>Coment as:</h2>
+                <input class="user" type="text" value="Anonymous">
+
+                <!-- input comment -->
+                <div class="commentinput">
+                    <input class="usercomment" type="text" placeholder="Enter Comment">
+                    <!-- Tombol -->
+                    <div class="buttons">
+                        <button type="submit" disabled id="publish">Publish</button>
+                        <div class="notify">
+                            <input type="checkbox" class="notifyinput"> <span>Notify Me</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+    </div>
+
+
+
+    <!-- Panggil file JavaScript eksternal -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="slidegame.js"></script>
+    <script src="kolom_komentar.js"></script> <!-- Memanggil Kolom Komment -->
+    <!-- <script src="infinite_scroll.js"></script> -->
+
+
+</body>
+
+</html>
