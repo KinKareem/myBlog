@@ -141,7 +141,7 @@ body {
     padding-right: 70px
 }
 
-.hsr {
+.genshin {
     width: 200px;
     height: auto;
     grid-column: 1 / 2;
@@ -149,7 +149,7 @@ body {
     grid-row: 1 / 2;
     /* Tempatkan di baris pertama */
     max-width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 /* Deskripsi Css */
@@ -163,7 +163,7 @@ body {
     margin-top: 5px;
     margin-left: 50px;
     width: 950px;
-    height: 200px;
+    height: 220px;
     background-color: #ffffff00;
     border-radius: 20px;
     border: 1px solid #ffffff;
@@ -181,12 +181,15 @@ body {
 } */
 
 
-.firefly {
+.nahida {
     position: relative;
     display: flex;
     margin-left: auto;
     right: 0;
-    margin-top: -350px;
+    margin-top: -380px;
+    width: 400px;
+    height: 550px;
+    margin-right: 50px;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 30%);
 }
 
@@ -228,7 +231,7 @@ body {
     margin-top: 8px;
     height: 3px;
     background-color: rgb(255, 255, 255);
-    width: 145px;
+    width: 160px;
 }
 
 .video_game {
