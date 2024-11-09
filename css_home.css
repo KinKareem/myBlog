@@ -8,9 +8,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-html,
 body {
-    overflow-x: hidden;
     background-color: #120538;
     width: auto;
     height: auto;
@@ -24,7 +22,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
-    z-index: 9999;
+    z-index: 10;
 }
 
 /* 
@@ -83,7 +81,6 @@ animasi slide */
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
-    text-decoration: none;
     margin-left: 40px;
 }
 
@@ -104,6 +101,52 @@ animasi slide */
 }
 
 
+/* Container dropdown */
+.dropdown_container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: rgba(18, 5, 56);
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 10px rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    list-style: none;
+    min-width: 250px;
+}
+
+/* Dropdown item */
+.dropdown li {
+    padding-top: 10px;
+    margin-bottom: 13px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    width: 70%;
+}
+
+/* Hover effect for dropdown links */
+.dropdown li a:hover {
+    color: white;
+    width: 70%;
+}
+
+/* Tampilkan dropdown on hover */
+.dropdown_container:hover .dropdown {
+    display: block;
+    width: 70%;
+}
 
 /* ------------------------------------------------------------------------ */
 

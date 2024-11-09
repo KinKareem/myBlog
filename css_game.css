@@ -10,7 +10,7 @@
 
 body {
     position: relative;
-    background-color: #120538;
+    background-color: rgb(18, 5, 56);
     width: auto;
     height: auto;
 }
@@ -47,7 +47,6 @@ body {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 500;
-    text-decoration: none;
     margin-left: 40px;
 }
 
@@ -67,6 +66,52 @@ body {
     width: 100%;
 }
 
+/* Container dropdown */
+.dropdown_container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: rgba(18, 5, 56);
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 10px rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    list-style: none;
+    min-width: 250px;
+}
+
+/* Dropdown item */
+.dropdown li {
+    padding-top: 10px;
+    margin-bottom: 13px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    width: 70%;
+}
+
+/* Hover effect for dropdown links */
+.dropdown li a:hover {
+    color: white;
+    width: 70%;
+}
+
+/* Tampilkan dropdown on hover */
+.dropdown_container:hover .dropdown {
+    display: block;
+    width: 70%;
+}
 
 
 /* ------------------------------------------------------------------------ */
@@ -284,8 +329,6 @@ body {
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.hsr_tim .gambar_team_1 .overlay_team .desc_chara h1 {}
-
 .hsr_tim .gambar_team_1:hover .overlay_team .desc_chara {
     opacity: 1;
     transform: translateY(0%);
@@ -313,20 +356,31 @@ body {
 
 .desc_chara h1 {
     font-size: 2rem;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .desc_chara p {
     font-size: 0.9rem;
     line-height: 1.4;
+    text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer */
 
 .footer {
     margin-top: 300px;
-    height: 100px;
+    height: auto;
     width: auto;
     background: transparent;
     box-shadow: 0.1px 1px 20px rgb(255, 255, 255);
+}
+
+.copyright {
+    padding-top: 3rem;
+    bottom: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: center;
+    color: #fff;
 }

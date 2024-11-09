@@ -57,7 +57,7 @@ function addPost() {
 
     comments.innerHTML += published;
 
-    // Mengosongkan textarea setelah komentar dipublikasikan
+    // Mengosongkan text area setelah komentar dipublikasikan
     userComment.value = "";
     publishBtn.setAttribute("disabled", "disabled");
     publishBtn.classList.remove("abled");
