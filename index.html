@@ -37,7 +37,7 @@
                 <a href="index.html" class="nextGame">Games</a>
                 <ul class="dropdown">
                     <li><a href="hsr.html">Honkai Star Rail</a></li>
-                    <li><a href="#">Honor of Kings</a></li>
+                    <li><a href="hok.html">Honor of Kings</a></li>
                     <li><a href="#">Mobile Legends</a></li>
                     <li><a href="genshin.html">Genshin Impact</a></li>
                 </ul>
@@ -180,7 +180,6 @@
                         </a>
                     </li>
                 </ul>
-
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -201,8 +200,40 @@
 
     <!-- ------------------------------------------------------------------------------------- -->
 
+    <!-- Fitur Uji coba -->
+    <div class="music-player">
+        <div class="cassette"></div>
+        <!-- isi -->
+        <div class="controls">
+            <div class="song-info">
+                <div class="song-title-wrapper">
+                    <span id="marquee">Title: -</span>
+                </div>
+                <br>
+                <!-- Waktu lagu -->
+                <span id="current-time">Time: 00:00</span>
+                <!-- Progress bar -->
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+            <!-- tombol -->
+            <div class="buttons">
+                <button id="prev-song">⏮️</button>
+                <button id="play-pause">⏸️</button>
+                <button id="next-song">⏭️</button>
+            </div>
+        </div>
+        <audio id="audio-player"></audio>
+    </div>
+    <!-- Tombol untuk menyembunyikan/memunculkan pemutar musik -->
+    <button class="btn_hide_music" id="toggle-music-player">
+        <img id="toggle-icon" src="music/oui_arrow-right.png" alt="Toggle music player" />
+    </button>
+    <!-- ---------------------------------------------------------------------- -->
+
     <!-- Footer -->
-    <div class="container-footer">
+    <footer class="container-footer">
         <div class="footer">
             <div class="row">
                 <div class="footer-col">
@@ -215,11 +246,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
 
     <!-- Panggil file JavaScript eksternal -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="slide_music.js"></script>
     <script src="slidegame.js"></script>
     <script src="transisi_home.js"></script>
     <!-- <script src="infinite_scroll.js"></script> -->

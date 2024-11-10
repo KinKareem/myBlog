@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <!-- File Css -->
+    <link rel="stylesheet" href="css_hok.css">
+    <link rel="stylesheet" href="comment.css">
+
+    <!-- FIle Javascript -->
+    <!-- <script src="pupup_video.js" defer></script> -->
+
+    <!-- Link Icon dari Google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- Transisi Halaman -->
+    <div class="transition-slide"></div>
+
+    <!-- header home -->
+    <header class="header_home">
+        <a href="#" class="logo_home">Logo</a>
+        <nav class="header_link">
+            <a href="index.html" class="nextHome">Home</a>
+            <div class="dropdown_container">
+                <a href="#" class="nextGame">Games</a>
+                <ul class="dropdown">
+                    <li><a href="hsr.html">Honkai Star Rail</a></li>
+                    <li><a href="hok.html">Honor of Kings</a></li>
+                    <li><a href="#">Mobile Legends</a></li>
+                    <li><a href="genshin.html">Genshin Impact</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nextAnime">Anime</a>
+            <a href="#" class="nextMusic">Music</a>
+            <a href="#" class="nextData">About Me</a>
+        </nav>
+    </header>
+
+    <!-- Isi -->
+    <div class="border_gambar">
+        <!-- <img class="robin" src="gambar/robin.png" alt=""> -->
+        <div class="border-bg">
+            <img class="hok_icon" src="hok/Honor-of-Kings.png" alt="">
+            <div class="isi">
+                <!-- Deskripsi game -->
+                <h1 class="judul_game">Honor of Kings</h1>
+                <p class="deskripsi"> Honor of Kings is a multiplayer online battle arena (MOBA) game in which the
+                    player controls a character with unique abilities and competes to defeat non-player characters and
+                    opponents to gain experience points and gold. With experience points, players can unlock their
+                    characters' abilities or further augment the power of their existing abilities.</p>
+            </div>
+            <!-- Gameplay -->
+            <div class="gameplay">
+                <h1>Gameplay</h1>
+                <hr>
+
+                <div class="video_game">
+                    <!-- Video 1 -->
+                    <video autoplay loop muted class="game1">
+                        <source src="hok/Game 1 hok.mp4">
+                    </video>
+                    <!-- Video 2 -->
+                    <video autoplay loop muted class="game1">
+                        <source src="hok/Game 2 hok.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <img class="dolia_nb" src="hok/dolia no bg.png" alt="">
+    </div>
+
+    <!-- Dibawah isi -->
+    <div class="comment_and_hsr_team">
+        <!-- Coment Session -->
+        <!-- box coment -->
+        <div class="contianer_comment">
+            <div class="head">
+                <h1>Post a Coment</h1>
+            </div>
+            <div>
+                <span id="comment">0</span> Comments
+            </div>
+            <div class="text">
+                <p>Place your Nickname and we can be a friend and play together</p>
+            </div>
+            <hr>
+            <div class="comments"></div>
+
+            <!-- Untuk Comment -->
+            <div class="commentbox">
+                <img src="gambar/Desain tanpa judul (16).png" alt="">
+                <div class="content">
+                    <h2>Coment as:</h2>
+                    <input class="user" type="text" value="Anonymous">
+
+                    <!-- input comment -->
+                    <div class="commentinput">
+                        <input class="usercomment" type="text" placeholder="Enter Comment">
+                        <!-- Tombol -->
+                        <div class="buttons">
+                            <button type="submit" disabled id="publish">Publish</button>
+                            <div class="notify">
+                                <input type="checkbox" class="notifyinput"> <span>Notify Me</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daftar karakter -->
+        <div class="container_tim">
+            <!-- cuma teks judul -->
+            <div class="judul_tim">
+                <h1>My Favourite Heroes</h1>
+                <hr>
+            </div>
+            <!-- Hero Session -->
+            <div class="container_hero">
+                <!-- Hero 1 -->
+                <div class="image_hero">
+                    <!-- Allain -->
+                    <img src="hok/1.png" class="front">
+                    <video autoplay muted loop playsinline aria-hidden src="hok/Allain.mp4" class="back"></video>
+                    <div class="overlay_hero">
+                        <h1>Allain</h1>
+                        <hr>
+                    </div>
+                </div>
+                <!-- Hero 2 -->
+                <div class="image_hero">
+                    <!-- Dolia -->
+                    <img src="hok/2.png" class="front">
+                    <video autoplay muted loop playsinline aria-hidden src="hok/Dolia.mp4" class="back"></video>
+                    <div class="overlay_hero">
+                        <h1>Dolia</h1>
+                        <hr>
+                    </div>
+                </div>
+                <!-- Hero 3 -->
+                <div class="image_hero">
+                    <!-- Dolia -->
+                    <img src="hok/3.png" class="front">
+                    <video autoplay muted loop playsinline aria-hidden src="hok/Sunce.mp4" class="back"></video>
+                    <div class="overlay_hero">
+                        <h1>Sunce</h1>
+                        <hr>
+                    </div>
+                </div>
+                <!-- Hero 4 -->
+                <div class="image_hero">
+                    <!-- Dolia -->
+                    <img src="hok/4.png" class="front">
+                    <video autoplay muted loop playsinline aria-hidden src="hok/Angela.mp4" class="back"></video>
+                    <div class="overlay_hero">
+                        <h1>Angela</h1>
+                        <hr>
+                    </div>
+                </div>
+                <!-- Hero 5 -->
+                <div class="image_hero">
+                    <!-- Dolia -->
+                    <img src="hok/5.png" class="front">
+                    <video autoplay muted loop playsinline aria-hidden src="hok/Lady Sun.mp4" class="back"></video>
+                    <div class="overlay_hero">
+                        <h1>LadySun</h1>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="copyright">
+            &copy; KareemXD, 2024
+        </div>
+    </div>
+
+
+    <!-- Panggil file JavaScript eksternal -->
+    <script src="hok.js"></script>
+    <script src="kolom_komentar.js"></script> <!-- Memanggil Kolom Komment -->
+    <!-- <script src="infinite_scroll.js"></script> -->
+
+
+</body>
+
+</html>

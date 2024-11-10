@@ -138,7 +138,7 @@ body {
     padding-right: 70px
 }
 
-.genshin {
+.hok_icon {
     width: 200px;
     height: auto;
     grid-column: 1 / 2;
@@ -167,15 +167,25 @@ body {
     box-shadow: 0.1px 0.1px 5px rgb(255, 255, 255);
 }
 
-.nahida {
+/* .robin {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 50%);
+} */
+
+
+.dolia_nb {
     position: relative;
     display: flex;
     margin-left: auto;
     right: 0;
-    margin-top: -380px;
-    width: 400px;
-    height: 550px;
-    margin-right: 50px;
+    margin-top: -320px;
+    width: auto;
+    height: 410px;
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 30%);
 }
 
@@ -195,6 +205,7 @@ body {
 }
 
 /* Gameplay CSS */
+
 .gameplay {
     margin-bottom: 200px;
     margin-left: 50px;
@@ -242,7 +253,7 @@ body {
 /* Detail Team */
 .container_tim {
     border-radius: 20px;
-    margin-left: 80px;
+    margin-left: 70px;
     background: transparent;
     box-sizing: border-box;
     width: auto;
@@ -261,98 +272,87 @@ body {
     width: 43%;
 }
 
-/* Team container */
-.hsr_tim {
+/* Container tim */
+
+.container_hero {
     display: flex;
-    width: 920px;
-    height: 570px;
-    background: rgb(0, 0, 0);
-}
-
-.hsr_tim .gambar_team_1 {
-    flex: 1;
-    max-width: 100%;
     position: relative;
+    width: 920px;
+    height: 550px;
+    background: transparent;
     overflow: hidden;
-    transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1);
+    margin-right: 5px;
 }
 
-.hsr_tim .gambar_team_1:hover {
-    flex: 2;
+.image_hero {
+    width: 920px;
+    height: 560px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.7s ease-in-out;
 }
 
-.hsr_tim .gambar_team_1 img {
+.image_hero img {
+    position: absolute;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
     object-fit: cover;
-    transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1)
+    padding-left: 5px;
 }
 
-.hsr_tim .gambar_team_1:hover img {
-    opacity: 1 !important;
-}
-
-.hsr_tim .gambar_team_1 .overlay_team {
+.image_hero video {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-    opacity: 0;
-    transform: translateY(10%);
-    transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1);
-}
-
-.hsr_tim .gambar_team_1:hover .overlay_team {
-    opacity: 1;
-    transform: translateY(0%);
-}
-
-.hsr_tim .gambar_team_1 .overlay_team .desc_chara {
-    position: absolute;
-    bottom: 3rem;
-    padding: 1rem;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hsr_tim .gambar_team_1:hover .overlay_team .desc_chara {
-    opacity: 1;
-    transform: translateY(0%);
-}
-
-.hsr_tim .gambar_team_1 video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
     object-fit: cover;
-    display: none;
+    padding-left: 5px;
 }
 
-.hsr_tim .gambar_team_1:hover video {
-    display: block;
+.image_hero:hover {
+    transform: rotateY(180deg);
 }
 
-.desc_chara {
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Text overlay styling */
+.overlay_hero {
     position: absolute;
-    color: #ffffff;
-    text-align: left;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    /* Rotate text back to normal */
+    backface-visibility: hidden;
+    /* Prevent text from flipping */
+    color: #fff;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
 }
 
-.desc_chara h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+/* Display text overlay when flipped */
+.image_hero .overlay_hero {
+    /* menampilkan text */
+    opacity: 1;
 }
 
-.desc_chara p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
+.overlay_hero h1 {
+    display: flex;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.overlay_hero hr {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
 }
 
 /* Footer */

@@ -474,6 +474,197 @@ hr {
     font-size: 40px;
 }
 
+/* --------------------- Menu Uji Coba ---------------------- */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1d1a3e, #193f55);
+    /* Gradien latar belakang */
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    color: #fff;
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.5s ease;
+    /* Animasi saat disembunyikan dan muncul */
+    transform: translateX(0);
+    /* Default posisi pemutar musik */
+}
+
+.music-player.hidden {
+    transform: translateX(-100%);
+    /* Menyembunyikan ke kiri */
+}
+
+/* Tombol untuk toggle music player */
+#toggle-music-player {
+    position: fixed;
+    top: 730px;
+    /* Posisi di samping pemutar musik */
+    background: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    margin-top: -205px;
+    margin-left: 12px;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9999;
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#toggle-icon {
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 50px;
+    /* Ukuran ikon */
+    height: 50px;
+    /* Ukuran ikon */
+}
+
+.btn_hide_music {
+    cursor: pointer;
+}
+
+#toggle-music-player:focus {
+    outline: none;
+    /* Menghapus outline saat tombol di-klik */
+}
+
+/* Styling untuk tombol-tombol kontrol */
+.btn_hide_music button {
+    margin: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Gambar kaset dengan animasi berputar */
+.cassette {
+    width: 120px;
+    height: 120px;
+    background: url('music/kaset.png') no-repeat center center;
+    /* Gambar kaset */
+    background-size: contain;
+    animation: spin 5s linear infinite;
+    /* Animasi putar kaset */
+    margin-right: 15px;
+}
+
+/* Animasi berputar kaset */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Wrapper untuk judul lagu */
+.song-title-wrapper {
+    position: relative;
+    width: 200px;
+    /* Ukuran kontainer untuk judul lagu */
+    height: 40px;
+    overflow: hidden;
+    /* Membatasi judul agar tidak keluar */
+    background-size: contain;
+    display: flex;
+    align-items: center;
+}
+
+/* Animasi untuk judul yang bergerak dari kanan ke kiri */
+#marquee {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fffae3;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    animation: marquee 10s linear infinite;
+}
+
+/* Animasi untuk judul bergerak */
+@keyframes marquee {
+    0% {
+        left: 100%;
+        /* Mulai dari luar kanan */
+    }
+
+    100% {
+        left: -200%;
+        /* Bergerak ke luar kiri */
+    }
+}
+
+/* Waktu lagu yang sedang diputar */
+#current-time {
+    font-size: 16px;
+    color: #fffae3;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling untuk progress bar */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #ffffff;
+    /* Warna latar belakang */
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #134c86;
+    /* Warna progress */
+    border-radius: 4px;
+}
+
+/* Tampilan kontrol tombol */
+.buttons {
+    display: flex;
+    gap: 8px;
+    /* Jarak antar tombol */
+    margin-top: 10px;
+}
+
+.buttons button {
+    background: #009ffd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek hover tombol */
+.buttons button:hover {
+    background: #005f9e;
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Pemutar audio */
+audio {
+    display: none;
+}
 
 /* ----------------------- Footer ------------------------- */
 
@@ -502,7 +693,6 @@ ul {
 
 .footer-col {
     position: relative;
-
     width: 100%;
 }
 
