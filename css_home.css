@@ -667,55 +667,19 @@ audio {
 }
 
 /* ----------------------- Footer ------------------------- */
-
-.container-footer {
-    margin-top: 120px;
-    height: 400px;
-    width: 100%;
-    background: linear-gradient(45deg, #120538, #7239db);
-}
-
 .footer {
-    padding: 70px 0;
-    position: relative;
+    margin-top: 300px;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: 0.1px 1px 20px rgb(255, 255, 255);
+}
+
+.copyright {
+    padding-top: 3rem;
     bottom: 0;
-    width: 100%;
-}
-
-.row {
-    flex-wrap: wrap;
-    max-width: auto;
-}
-
-ul {
-    list-style: none;
-}
-
-.footer-col {
-    position: relative;
-    width: 100%;
-}
-
-.footer-col h4 {
-    position: relative;
-    font-size: 50px;
-    color: white;
-    text-transform: capitalize;
-    margin-bottom: 30px;
-    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0.8;
     text-align: center;
-}
-
-.social-links {
-    position: relative;
-    display: flex;
-    color: rgb(255, 255, 255);
-    font-size: 110px;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-col ul li:not(:last-child) {
-    margin-top: 10px;
+    color: #fff;
 }

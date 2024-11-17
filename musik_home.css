@@ -1,0 +1,507 @@
+/* Font Home */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #120538;
+    width: auto;
+    height: auto;
+}
+
+/* --------------------------Transisi Web-------------------------------- */
+.transition-slide {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+/* 
+animasi slide */
+@keyframes slideAnimation {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 0%;
+    }
+
+    75% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Terapkan animasi */
+.active-slide {
+    animation: slideAnimation 2s ease forwards;
+}
+
+/* --------------------------------------------------------- */
+
+/* Header css */
+.header_home {
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: transparent;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 100;
+    box-shadow: 0.1px 0.1px 10px rgb(255, 255, 255, 0.5);
+}
+
+.logo_home {
+    font-size: 36px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 750;
+}
+
+.header_link a {
+    position: relative;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* Hover effect */
+.header_link a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.header_link a:hover::before {
+    width: 100%;
+}
+
+
+/* Container dropdown */
+.dropdown_container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: rgba(18, 5, 56);
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 10px rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    list-style: none;
+    min-width: 250px;
+}
+
+/* Dropdown item */
+.dropdown li {
+    padding-top: 10px;
+    margin-bottom: 13px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    width: 70%;
+}
+
+/* Hover effect for dropdown links */
+.dropdown li a:hover {
+    color: white;
+    width: 70%;
+}
+
+/* Tampilkan dropdown on hover */
+.dropdown_container:hover .dropdown {
+    display: block;
+    width: 70%;
+}
+
+/* -------------------- Setel musik css ------------------------- */
+
+.container {
+    padding: 50px;
+    overflow: hidden;
+}
+
+.song-title {
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.song-title-hr {
+    height: 3px;
+    margin-bottom: 20px;
+    background-color: floralwhite;
+}
+
+/* Container scrollable untuk daftar lagu */
+.song-container {
+    display: flex;
+    gap: 20px;
+    scrollbar-width: none;
+    padding-bottom: 20px;
+    overflow-x: auto;
+}
+
+.song-container::-webkit-scrollbar {
+    display: none;
+    /* Menyembunyikan scrollbar */
+}
+
+/* Kartu lagu individu */
+.song-card {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1e0a46;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.song-card:hover {
+    transform: scale(0.95);
+}
+
+.song-cover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.song-info {
+    padding: 10px;
+    color: #fff;
+}
+
+/* Pemutar Musik di Pojok Kiri Bawah */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #1b0853;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    /* Animasi saat disembunyikan dan muncul */
+    transform: translateX(0);
+    /* Default posisi pemutar musik */
+}
+
+.music-player.hidden {
+    transform: translateX(-100%);
+    /* Menyembunyikan ke kiri */
+}
+
+.player-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Informasi lagu yang sedang dimainkan */
+.player-info {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Animasi judul lagu bergerak dari kanan ke kiri */
+.player-info h4 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+    margin: 0;
+    width: 100px;
+    font-size: 23px;
+}
+
+.player-info p {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(-220%);
+    }
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+#progress-bar {
+    flex: 1;
+    margin: 0 10px;
+    height: 4px;
+    border-radius: 5px;
+    appearance: none;
+    background-color: #666;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.progress-container span {
+    font-size: 15px;
+}
+
+/* Kontrol Pemutar Musik */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls button {
+    background-color: #280c7c;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #fffbfb;
+}
+
+/* Tombol untuk toggle music player */
+#toggle-music-player {
+    position: fixed;
+    top: 730px;
+    /* Posisi di samping pemutar musik */
+    background: #fff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    margin-top: -180px;
+    margin-left: 5px;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9999;
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#toggle-icon {
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 35px;
+    /* Ukuran ikon */
+    height: 35px;
+    /* Ukuran ikon */
+}
+
+.btn_hide_music {
+    cursor: pointer;
+}
+
+#toggle-music-player:focus {
+    outline: none;
+    /* Menghapus outline saat tombol di-klik */
+}
+
+/* Styling untuk tombol-tombol kontrol */
+.btn_hide_music button {
+    margin: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ------------------------- Div comment dan tim  ------------------------------*/
+.comment_and_hsr_team {
+    display: flex;
+}
+
+/* Detail Team */
+.container_tim {
+    border-radius: 20px;
+    margin-left: 80px;
+    background: transparent;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.judul_tim {
+    color: #fff;
+    margin-bottom: 33px;
+}
+
+.judul_tim hr {
+    margin-top: 10px;
+    color: #fff;
+    width: 48%;
+}
+
+.hsr_tim {
+    width: 920px;
+    height: 570px;
+    display: flex;
+    background: rgb(0, 0, 0);
+}
+
+.hsr_tim .gambar_team_1 {
+    flex: 1;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+
+.hsr_tim .gambar_team_1:hover {
+    flex: 2.5;
+}
+
+.hsr_tim .gambar_team_1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1)
+}
+
+.hsr_tim .gambar_team_1:hover img {
+    opacity: 1 !important;
+}
+
+.hsr_tim .gambar_team_1 .overlay_team {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+
+.hsr_tim .gambar_team_1:hover .overlay_team {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.hsr_tim .gambar_team_1 .overlay_team .desc_chara {
+    position: absolute;
+    bottom: 3rem;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hsr_tim .gambar_team_1:hover .overlay_team .desc_chara {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.hsr_tim .gambar_team_1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.hsr_tim .gambar_team_1:hover video {
+    display: block;
+}
+
+.desc_chara {
+    position: absolute;
+    color: #ffffff;
+    text-align: left;
+}
+
+.desc_chara h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc_chara p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*--------------- Footer ---------------*/
+
+.footer {
+    margin-top: 300px;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: 0.1px 1px 20px rgb(255, 255, 255);
+}
+
+.copyright {
+    padding-top: 3rem;
+    bottom: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: center;
+    color: #fff;
+}

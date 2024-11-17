@@ -1,0 +1,375 @@
+/* Font Home */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: rgb(18, 5, 56);
+    width: auto;
+    height: auto;
+}
+
+/*------------------------ Background ----------------------*/
+
+
+/* Header css */
+.header_home {
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: transparent;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 100;
+    box-shadow: 0.1px 0.1px 10px rgb(255, 255, 255, 0.5);
+}
+
+.logo_home {
+    font-size: 36px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 750;
+}
+
+.header_link a {
+    position: relative;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* Hover effect */
+.header_link a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.header_link a:hover::before {
+    width: 100%;
+}
+
+/* Container dropdown */
+.dropdown_container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: rgba(18, 5, 56);
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 10px rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    list-style: none;
+    min-width: 250px;
+}
+
+/* Dropdown item */
+.dropdown li {
+    padding-top: 10px;
+    margin-bottom: 13px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    width: 70%;
+}
+
+/* Hover effect for dropdown links */
+.dropdown li a:hover {
+    color: white;
+    width: 70%;
+}
+
+/* Tampilkan dropdown on hover */
+.dropdown_container:hover .dropdown {
+    display: block;
+    width: 70%;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+.border-bg {
+    position: relative;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Gambar akan berada di sebelah kiri, teks di kanan */
+    grid-template-rows: auto auto;
+    /* Baris pertama untuk gambar dan teks, baris kedua untuk gameplay */
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.1),
+            rgba(242, 242, 242, 0.1),
+            rgba(230, 230, 230, 0.1));
+    width: 80%;
+    height: 700px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+    margin-top: 40px;
+    margin-left: 170px;
+    padding-right: 70px
+}
+
+.mole_icon {
+    width: auto;
+    height: 170px;
+    grid-column: 1 / 2;
+    padding-left: 20px;
+    /* Tempatkan gambar di kolom pertama */
+    grid-row: 1 / 2;
+    /* Tempatkan di baris pertama */
+}
+
+/* Deskripsi Css */
+
+.isi {
+    position: relative;
+    grid-column: 2 / 3;
+    /* Tempatkan teks di kolom kedua */
+    grid-row: 1 / 2;
+    /* Tempatkan di baris pertama */
+    margin-top: 5px;
+    margin-left: 50px;
+    width: 950px;
+    height: 220px;
+    background-color: #ffffff00;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: 0.1px 0.1px 5px rgb(255, 255, 255);
+}
+
+/* .robin {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 50%);
+} */
+
+
+.lunox_nb {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    right: 0;
+    margin-top: -320px;
+    width: auto;
+    height: 410px;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 30%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 40%);
+}
+
+.isi h1 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.isi p {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(254, 254, 254);
+    text-align: justify;
+}
+
+/* Gameplay CSS */
+
+.gameplay {
+    margin-bottom: 200px;
+    margin-left: 50px;
+    grid-column: 1 / 3;
+    /* Membuat gameplay memakan lebar dua kolom */
+    grid-row: 2 / 3;
+    /* Tempatkan gameplay di baris kedua */
+    width: 100px;
+    height: 100px;
+}
+
+.gameplay h1 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.gameplay hr {
+    border: none;
+    margin-top: 8px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    width: 160px;
+}
+
+.video_game {
+    display: flex;
+    width: 100px;
+    height: 200px;
+    gap: 60px
+}
+
+.game1 {
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 500px;
+    height: 210px;
+    box-shadow: 0.1px 0.1px 5px rgb(255, 255, 255);
+}
+
+/* Div comment dan tim */
+.comment_and_hsr_team {
+    display: flex;
+}
+
+/* Detail Team */
+.container_tim {
+    border-radius: 20px;
+    margin-left: 70px;
+    background: transparent;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.judul_tim {
+    color: #fff;
+    margin-bottom: 33px;
+}
+
+.judul_tim hr {
+    margin-top: 10px;
+    color: #fff;
+    width: 43%;
+}
+
+/* Container tim */
+
+.container_hero {
+    display: flex;
+    position: relative;
+    width: 920px;
+    height: 550px;
+    background: transparent;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.image_hero {
+    width: 920px;
+    height: 560px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.7s ease-in-out;
+}
+
+.image_hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    object-fit: cover;
+    padding-left: 5px;
+}
+
+.image_hero video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    object-fit: cover;
+    padding-left: 5px;
+}
+
+.image_hero:hover {
+    transform: rotateY(180deg);
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+/* Text overlay styling */
+.overlay_hero {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    /* Rotate text back to normal */
+    backface-visibility: hidden;
+    /* Prevent text from flipping */
+    color: #fff;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Display text overlay when flipped */
+.image_hero .overlay_hero {
+    /* menampilkan text */
+    opacity: 1;
+}
+
+.overlay_hero h1 {
+    display: flex;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.overlay_hero hr {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 300px;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: 0.1px 1px 20px rgb(255, 255, 255);
+}
+
+.copyright {
+    padding-top: 3rem;
+    bottom: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: center;
+    color: #fff;
+}

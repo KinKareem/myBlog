@@ -1,0 +1,391 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <!-- File Css -->
+    <link rel="stylesheet" href="musik_home.css">
+    <link rel="stylesheet" href="comment.css">
+    <!-- File Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- FIle Javascript -->
+    <script src="fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/js/all.js"></script>
+    <!-- <script src="pupup_video.js" defer></script> -->
+
+    <!-- Link Icon dari Google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- Transisi Halaman -->
+    <div class="transition-slide"></div>
+
+    <!-- header home -->
+    <header class="header_home">
+        <a href="#" class="logo_home">Logo</a>
+        <nav class="header_link">
+            <a href="index.html" class="nextHome">Home</a>
+            <div class="dropdown_container">
+                <a href="#" class="nextGame">Games</a>
+                <ul class="dropdown">
+                    <li><a href="hsr.html">Honkai Star Rail</a></li>
+                    <li><a href="hok.html">Honor of Kings</a></li>
+                    <li><a href="mole.html">Mobile Legends</a></li>
+                    <li><a href="genshin.html">Genshin Impact</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nextAnime">Anime</a>
+            <a href="#" class="nextMusic">Music</a>
+            <a href="#" class="nextData">About Me</a>
+        </nav>
+    </header>
+
+    <!-- List container lagu Inggris-->
+    <div class="container">
+        <h2 class="song-title">Inggris Song</h2>
+        <hr class="song-title-hr">
+        <div class="song-container">
+            <!-- Lagu 1 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/APT.mp3', 'APT', 'Rose & Bruno Mars', 'hal_musik_gambar/APT.webp')">
+                <img src="hal_musik_gambar/APT.webp" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>APT</h3>
+                    <p>Rose & Bruni Mars</p>
+                </div>
+            </div>
+            <!-- Lagu 2 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Paradise.mp3', 'Paradise', 'Coldplay', 'hal_musik_gambar/Paradice.JPG')">
+                <img src="hal_musik_gambar/Paradice.JPG" alt="Cover 2" class="song-cover">
+                <div class="song-info">
+                    <h3>Paradise</h3>
+                    <p>Coldplay</p>
+                </div>
+            </div>
+            <!-- Lagu 3 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Blank Space.mp3', 'Blank Space', 'Taylor Swift', 'hal_musik_gambar/Blank Space.jpeg')">
+                <img src="hal_musik_gambar/Blank Space.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Blank Space</h3>
+                    <p>Taylor Swift</p>
+                </div>
+            </div>
+            <!-- Lagu 4 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Rude.mp3', 'Rude', 'Magic', 'hal_musik_gambar/Rude.png')">
+                <img src="hal_musik_gambar/Rude.png" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Rude</h3>
+                    <p>Magic</p>
+                </div>
+            </div>
+            <!-- Lagu 5 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Flashlight.mp3', 'Flashlight', 'Jessie Jane', 'hal_musik_gambar/Flashlight.jpeg')">
+                <img src="hal_musik_gambar/Flashlight.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Flashlight</h3>
+                    <p>Jessie Jane</p>
+                </div>
+            </div>
+            <!-- Lagu 6 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Die With A Smile.mp3', 'Flashlight', 'Lady Gaga & Bruno Mars', 'hal_musik_gambar/Die With A Smile.png')">
+                <img src="hal_musik_gambar/Die With A Smile.png" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Die With A Smile</h3>
+                    <p>Lady Gaga & Bruno Mars</p>
+                </div>
+            </div>
+            <!-- Lagu 7 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Message In A Bottle.mp3', 'Message In A Bottle', 'Taylor Swift', 'hal_musik_gambar/Message In A Bottle.jpeg')">
+                <img src="hal_musik_gambar/Message In A Bottle.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Message In A Bottle</h3>
+                    <p>Taylor Swift</p>
+                </div>
+            </div>
+            <!-- Lagu 8 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Viva La vida.mp3', 'Viva La vida', 'Coldplay', 'hal_musik_gambar/Viva La vida.jpeg')">
+                <img src="hal_musik_gambar/Viva La vida.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Viva La vida</h3>
+                    <p>Coldplay</p>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak song-card sesuai kebutuhan -->
+        </div>
+    </div>
+
+    <!-- List container lagu Indonesia-->
+    <div class="container">
+        <h2 class="song-title">Indonesia Song</h2>
+        <hr class="song-title-hr">
+        <div class="song-container">
+            <!-- Lagu 1 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Heavy Rotation.mp3', 'Heavy Rotation', 'JKT - 48', 'hal_musik_gambar/Heavy Rotation.jpeg')">
+                <img src="hal_musik_gambar/Heavy Rotation.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Heavy Rotation</h3>
+                    <p>JKT - 48</p>
+                </div>
+            </div>
+            <!-- Lagu 2 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Rapsodi.mp3', 'Rapsodi', 'JKT - 48', 'hal_musik_gambar/Rapsodi.jpeg')">
+                <img src="hal_musik_gambar/Rapsodi.jpeg" alt="Cover 2" class="song-cover">
+                <div class="song-info">
+                    <h3>Rapsodi</h3>
+                    <p>JKT - 48</p>
+                </div>
+            </div>
+            <!-- Lagu 3 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Dia Milik Ku.mp3', 'Dia Milik Ku', 'Yovi Nuno', 'hal_musik_gambar/Dia Milik Ku.jpeg')">
+                <img src="hal_musik_gambar/Dia Milik Ku.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Dia Milik Ku</h3>
+                    <p>Yovi Nuno</p>
+                </div>
+            </div>
+            <!-- Lagu 4 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Pernikahan Kita.mp3', 'Pernikahan Kita', 'Tiara Andini', 'hal_musik_gambar/Pernikahan Kita.jpg')">
+                <img src="hal_musik_gambar/Pernikahan Kita.jpg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Pernikahan Kita</h3>
+                    <p>Tiara Andini</p>
+                </div>
+            </div>
+            <!-- Lagu 5 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Masih Hatiku.mp3', 'Masih Hatiku', 'Tiara Andini', 'hal_musik_gambar/Masih Hatiku.jpeg')">
+                <img src="hal_musik_gambar/Masih Hatiku.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Masih Hatiku</h3>
+                    <p>Tiara Andini</p>
+                </div>
+            </div>
+            <!-- Lagu 6 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Cintanya Aku.mp3', 'Cintanya Aku', 'Tiara Andini', 'hal_musik_gambar/Cintanya Aku.jpeg')">
+                <img src="hal_musik_gambar/Cintanya Aku.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Cintanya Aku</h3>
+                    <p>Tiara Andini</p>
+                </div>
+            </div>
+            <!-- Lagu 7 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Terlalu Cinta.mp3', 'Terlalu Cinta', 'Rossa', 'hal_musik_gambar/Terlalu Cinta.jpeg')">
+                <img src="hal_musik_gambar/Terlalu Cinta.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Terlalu CInta</h3>
+                    <p>Rossa</p>
+                </div>
+            </div>
+            <!-- Lagu 8 -->
+            <div class="song-card"
+                onclick="playSong('hal_musik_lagu/Tiba Tiba Cinta Datang.mp3', 'Tiba Tiba Cinta Datang', 'Maudy Ayunda', 'hal_musik_gambar/Tiba Tiba Cinta Datang.jpeg')">
+                <img src="hal_musik_gambar/Tiba Tiba Cinta Datang.jpeg" alt="Cover 1" class="song-cover">
+                <div class="song-info">
+                    <h3>Tiba Tiba Cinta Datang</h3>
+                    <p>Maudy Ayunda</p>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak song-card sesuai kebutuhan -->
+        </div>
+    </div>
+
+    <!-- Pemutar Musik di Pojok Kiri Bawah -->
+    <div class="music-player">
+        <img id="current-cover" src="aset comment/user.png" alt="Cover" class="player-cover">
+        <div class="player-info">
+            <h4 id="current-title">Song Title 1</h4>
+            <p id="current-artist">Artist 1</p>
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" min="0" max="100" value="0">
+                <span id="total-time">0:00</span>
+            </div>
+            <!--kontrol tombol  -->
+            <div class="controls">
+                <button id="prev-button" onclick="prevSong()">⏮️</button>
+                <button id="play-pause-button" onclick="togglePlay()">⏸️</button>
+                <button id="next-button" onclick="nextSong()">⏭️</button>
+            </div>
+            <audio id="audio-player" ontimeupdate="updateProgress()"></audio>
+        </div>
+    </div>
+    <!-- Tombol untuk menyembunyikan/memunculkan pemutar musik -->
+    <button class="btn_hide_music" id="toggle-music-player">
+        <img id="toggle-icon" src="music/oui_arrow-right.png" alt="Toggle music player" />
+    </button>
+
+    <!-- Container comment dan hsr -->
+    <div class="comment_and_hsr_team">
+        <!-- Coment Session -->
+        <!-- box coment -->
+        <div class="contianer_comment">
+            <div class="head">
+                <h1>Post a Coment</h1>
+            </div>
+            <div>
+                <span id="comment">0</span> Comments
+            </div>
+            <div class="text">
+                <p>Share your name song</p>
+            </div>
+            <hr>
+            <div class="comments"></div>
+
+            <!-- Untuk Comment -->
+            <div class="commentbox">
+                <img src="gambar/Desain tanpa judul (16).png" alt="">
+                <div class="content">
+                    <h2>Coment as:</h2>
+                    <input class="user" type="text" value="Anonymous">
+
+                    <!-- input comment -->
+                    <div class="commentinput">
+                        <input class="usercomment" type="text" placeholder="Enter Comment">
+                        <!-- Tombol -->
+                        <div class="buttons">
+                            <button type="submit" disabled id="publish">Publish</button>
+                            <div class="notify">
+                                <input type="checkbox" class="notifyinput"> <span>Notify Me</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daftar karakter -->
+        <div class="container_tim">
+            <!-- cuma teks judul -->
+            <div class="judul_tim">
+                <h1>My Favourite Artist/Band</h1>
+                <hr>
+            </div>
+            <!-- Isi karakter -->
+            <div class="hsr_tim">
+                <!-- karakter favorit -->
+                <div class="gambar_team_1">
+                    <!-- Hu Tao -->
+                    <img src="hal_musik_gambar/Taylor Swift.jpg" alt="">
+                    <video paused loop muted playsinline aria-hidden="true" src=""></video>
+                    <span class="overlay_team">
+                        <div class="desc_chara">
+                            <h1>Taylor Swift</h1>
+                            <p>
+                                Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter. Known for
+                                her biographical songwriting, artistic reinventions, and cultural impact, Swift is a
+                                leading figure in popular music and the subject of widespread public interest.
+                                Swift signed to Big Machine Records in 2005 starting as a country singer with the albums
+                                Taylor Swift (2006) and Fearless (2008). Her singles "Teardrops on My Guitar", "Love
+                                Story", and "You Belong with Me" found crossover success on country and pop radio
+                                formats.
+                            </p>
+                        </div>
+                    </span>
+                </div>
+                <!-- karakter favorit -->
+                <div class="gambar_team_1">
+                    <!-- Nahida -->
+                    <img src="hal_musik_gambar/Coldplay.jpg" alt="">
+                    <video paused loop muted playsinline aria-hidden="true" src="" class="chara">
+                    </video>
+                    <span class="overlay_team">
+                        <div class="desc_chara">
+                            <h1>Coldplay</h1>
+                            <p>
+                                Coldplay are a British rock band formed in London in 1997. They consist of vocalist and
+                                pianist Chris Martin, guitarist Jonny Buckland, bassist Guy Berryman, drummer and
+                                percussionist Will Champion, and manager Phil Harvey. They are best known for their
+                                live performances, and for impacting popular culture through their music, advocacy
+                                and achievements.
+                                The members of the band initially met at University College London, calling themselves
+                                Big Fat Noises and changing to Starfish, before settling on the current name.
+                            </p>
+                        </div>
+                    </span>
+                </div>
+                <!-- karakter favorit -->
+                <div class="gambar_team_1">
+                    <!-- Yoimiya -->
+                    <img src="hal_musik_gambar/JKT - 48.webp" alt="">
+                    <video paused loop muted playsinline aria-hidden="true" src="" class="chara">
+                    </video>
+                    <span class="overlay_team">
+                        <div class="desc_chara">
+                            <h1>JKT - 48</h1>
+                            <p>
+                                JKT48 (read as "J. K. T. forty-eight") is an Indonesian-Japanese idol girl group whose
+                                name is derived from its based city of Jakarta and the Japanese idol group AKB48. Formed
+                                in 2011, the group is the first AKB48 sister group outside Japan and adopts the concept
+                                of "idols you can meet",[1] before switching to "idols that will come to meet you" since
+                                April 2018
+                        </div>
+                    </span>
+                </div>
+                <!-- karakter favorit -->
+                <div class="gambar_team_1">
+                    <!-- Sparkle -->
+                    <img src="hal_musik_gambar/Radwimps.jpg" alt="">
+                    <video paused loop muted playsinline aria-hidden="true" src="">
+                    </video>
+                    <span class="overlay_team">
+                        <div class="desc_chara">
+                            <h1>Radwimps</h1>
+                            <p>
+                                Radwimps (ラッドウインプス, Raddo'uinpusu, stylized as RADWIMPS) is a Japanese rock band who
+                                debuted independently in 2003 and signed with Toshiba EMI in 2005. The band's name,
+                                Radwimps, was formed from two English slang terms, "rad" and "wimp". According to the
+                                band, the coined word had several meanings, including "excellent weakling" and
+                                "superlative coward"
+                            </p>
+                        </div>
+                    </span>
+                </div>
+                <!-- karakter favorit -->
+                <div class="gambar_team_1">
+                    <!-- Robin -->
+                    <img src="hal_musik_gambar/Yoasobi.webp" alt="">
+                    <video paused loop muted playsinline aria-hidden="true" src="">
+                    </video>
+                    <span class="overlay_team">
+                        <div class="desc_chara">
+                            <h1>Yoasobi</h1>
+                            <p>
+                                Yoasobi is a Japanese pop duo formed in 2019. It consists of musician and record
+                                producer Ayase and singer-songwriter Lilas Ikuta, under the moniker Ikura. With the
+                                slogan "novel into music", the duo originally released songs based on selected short
+                                stories posted on Monogatary.com, a social media website for creative writing
+                                operated by Sony Music Entertainment Japan.
+                        </div>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="copyright">
+            &copy; KareemXD, 2024
+        </div>
+    </div>
+
+    <script src="musik_home.js"></script>
+</body>
