@@ -1,0 +1,323 @@
+/* Font Home */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: rgb(18, 5, 56);
+    width: auto;
+    height: auto;
+}
+
+
+/* Header css */
+.header_home {
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    background: transparent;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 100;
+    box-shadow: 0.1px 0.1px 10px rgb(255, 255, 255, 0.5);
+}
+
+.logo_home {
+    font-size: 36px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 750;
+}
+
+.header_link a {
+    position: relative;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* Hover effect */
+.header_link a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.header_link a:hover::before {
+    width: 100%;
+}
+
+/* Container dropdown */
+.dropdown_container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: rgba(18, 5, 56);
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 10px rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    list-style: none;
+    min-width: 250px;
+}
+
+/* Dropdown item */
+.dropdown li {
+    padding-top: 10px;
+    margin-bottom: 13px;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    display: block;
+    width: 70%;
+}
+
+/* Hover effect for dropdown links */
+.dropdown li a:hover {
+    color: white;
+    width: 70%;
+}
+
+/* Tampilkan dropdown on hover */
+.dropdown_container:hover .dropdown {
+    display: block;
+    width: 70%;
+}
+
+
+/* ------------------------------------------------------------------------ */
+
+.container-menu {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    margin-top: 20px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.1),
+            rgba(242, 242, 242, 0.1),
+            rgba(230, 230, 230, 0.1));
+    color: white;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 98px;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+.nav-button:hover {
+    color: rgb(170, 170, 170);
+    border-radius: 10px;
+}
+
+.content-wrapper {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 30px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    border-radius: 15px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.1),
+            rgba(242, 242, 242, 0.1),
+            rgba(230, 230, 230, 0.1));
+    /* Semua konten awalnya di luar layar kanan */
+    opacity: 0;
+    /* Awalnya tidak terlihat */
+    transition: all 0.8s ease;
+    /* Transisi halus untuk animasi */
+}
+
+.content.active {
+    left: 0;
+    /* Geser ke tengah layar */
+    opacity: 1;
+    /* Terlihat */
+}
+
+.content.hidden {
+    left: -100%;
+    /* Geser ke luar layar kiri */
+    opacity: 0;
+    /* Tidak terlihat */
+}
+
+/* Main Content */
+.main-konten {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin-top: 15px;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 28px;
+    padding-left: 15px;
+    color: #fff;
+}
+
+.profile-details p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 25px;
+    padding-right: 30px;
+    ;
+    text-align: justify;
+}
+
+.profile-details span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.like-section {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.isi_data {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.kiri,
+.kanan {
+    width: 50%;
+}
+
+.kiri {
+    color: #fff;
+    padding-left: 30px;
+}
+
+.kiri h1 {
+    font-size: 30px;
+}
+
+.kiri p {}
+
+/* Badges */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.stat p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Footer */
+.footer {
+    margin-top: 300px;
+    height: auto;
+    width: auto;
+    background: transparent;
+    box-shadow: 0.1px 1px 20px rgb(255, 255, 255);
+}
+
+.copyright {
+    padding-top: 3rem;
+    bottom: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+    text-align: center;
+    color: #fff;
+}
